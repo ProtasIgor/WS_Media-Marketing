@@ -1,0 +1,95 @@
+.footer {
+    @include padd-marg-block(100px, 0px);
+    background-color: #2a2a2a;
+
+    &__title {
+        @include title;
+        margin-bottom: 30px;
+        color: #FFF;
+    }
+
+    &__social-list {
+        margin-bottom: 40px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__link {
+        padding: 1em;
+        display: block;
+        border-radius: 5px;
+        border: 1px solid #515151;
+
+        @media screen and (min-width: 1024px) {
+            &:hover {
+                border-color: #de2b24;
+            }
+        }
+    }
+
+    &__link>* {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__text {
+        margin: 0 auto 30px;
+        max-width: 400px;
+        text-align: center;
+        color: #8c8c8c;
+
+        @media (max-width: 780px) {
+            max-width: 80%;
+        }
+    }
+
+    &__input-text {
+        @include form-input;
+
+        margin-bottom: 30px;
+        width: 100%;
+        max-width: 680px;
+        background-color: #515151;
+        caret-color: currentColor;
+        color: #FFF;
+
+        @media (max-width: 780px) {
+            max-width: 80%;
+        }
+    }
+
+    &__input-submit {
+        @include form-input;
+        margin-bottom: 80px;
+        border: 1px solid #515151;
+        color: #FFF;
+
+        background-color: transparent;
+
+        @media screen and (min-width: 1024px) {
+            &:hover {
+                border-color: #de2b24;
+            }
+        }
+
+        @media (max-width: 780px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__postscript {
+        padding: 2em;
+        display: block;
+        text-align: center;
+        font-size: 1em;
+        background-color: #515151;
+        color: #FFF;
+
+        @media (max-width: 780px) {
+            padding: 2em 0;
+            font-size: .8em;
+        }
+    }
+}

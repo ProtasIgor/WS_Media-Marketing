@@ -1,0 +1,86 @@
+@mixin title {
+    margin: 0 auto;
+    max-width: 80%;
+    font-size: 2.5em;
+    color: $color-title;
+    text-align: center;
+
+    @media (max-width: 640px) {
+        font-size: 1.5em;
+    }
+}
+
+@mixin block-description {
+    position: relative;
+    margin: 0 auto 50px;
+    padding-bottom: 1em;
+    width: 100%;
+    max-width: 80%;
+    font-family: $ff-main-light, sans-serif;
+    font-size: 1.6em;
+    color: $color-title;
+    text-align: center;
+
+    @media (max-width: 640px) {
+        font-size: 1em;
+    }
+}
+
+@mixin line-block {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 47px;
+    height: 5px;
+    background-color: #424242;
+}
+
+@mixin picture-item-cover {
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+@mixin padd-marg-block($pt, $pb) {
+    padding-top: $pt;
+    padding-bottom: $pb;
+
+    @media (max-width: 640px) {
+        padding-top: calc($pt / 2);
+        padding-bottom: calc($pb / 2);
+    }
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin footer-form-text {
+    &::placeholder {
+        color: #FFF;
+    }
+
+    &::-moz-placeholder {
+        color: #FFF;
+
+    }
+
+    &:-ms-input-placeholder {
+        color: #FFF;
+
+    }
+}
+
+@mixin form-input {
+    margin: 0 auto;
+    padding: 1em;
+    display: block;
+    border: none;
+}

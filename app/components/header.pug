@@ -1,0 +1,42 @@
+//- include header.pug
+header.header
+    .header__social
+        .container
+            .header__social-inner
+                .header__social-box
+                    a.header__social-item.header__phone(href="tel:63373128")
+                        svg
+                            use(xlink:href='images/sprite.svg#phone')
+                        span 6337 3128
+                    a.header__social-item.header__email(href="mailto:info@business.co")
+                        svg
+                            use(xlink:href='images/sprite.svg#mail')
+                        span info@business.co
+                    a.header__social-item.header__facebook(href='https://ru-ru.facebook.com' target='_blank')
+                        svg
+                            use(xlink:href='images/sprite.svg#facebook')
+    .header__nav-bar
+        .container
+            .header__nav-bar-inner
+                picture.header__logo
+                    source(srcset='images/logo.avif' type='image/avif')
+                    source(srcset='images/logo.webp' type='image/webp')
+                    img(src='images/logo.png' alt='business here' fetchpriority="high")
+                ul.header__nav
+                    li.header__nav-item
+                        a.header__link Home
+                    li.header__nav-item
+                        a.header__link About Us
+                    li.header__nav-item
+                        a.header__link Our Approch
+                    li.header__nav-item
+                        a.header__link.header__link--last-child Our Work
+                    li.header__nav-item
+                        button.header__button.button Free Consultation
+    .header__content
+        h1.header__title We Providing
+        p.header__text Social Media marketing for businesses
+        button.header__content-button.button FREE CONSULTATION
+
+
+

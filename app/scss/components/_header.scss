@@ -1,0 +1,206 @@
+.header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__social {
+        background-color: $bgc-header-social;
+    }
+
+    &__social-box {
+        height: 42px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    &__social-item:not(:last-child) {
+        padding: 0 1em;
+    }
+
+    &__social-item>span {
+        display: inline-block;
+        color: #000;
+
+        @media (max-width:600px) {
+            font-size: 0.8em;
+        }
+    }
+
+    &__social-item>svg {
+        display: inline-block;
+        box-sizing: border-box;
+        position: relative;
+        top: 3px;
+    }
+
+    &__social-item>svg:not(:last-child) {
+        margin-right: 4px;
+    }
+
+    &__phone>svg {
+        width: 11px;
+        height: 18px;
+    }
+
+    &__email>svg {
+        width: 20px;
+        height: 16px;
+    }
+
+    &__facebook>svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    &__nav-bar {
+        padding: 2.5em 0;
+    }
+
+    &__nav-bar-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 930px) {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &__logo {
+        flex-basis: 242px;
+        object-position: center;
+        object-fit: cover;
+
+        @media (max-width: 930px) {
+            flex-basis: auto;
+
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 620px) {
+            flex-direction: column;
+
+        }
+    }
+
+    &__link {
+        position: relative;
+        padding: 1em;
+        display: block;
+        font-family: $ff-main-bold, sans-serif;
+        cursor: pointer;
+
+
+        @media screen and (min-width: 600px) {
+            &:hover {
+                color: red;
+                transition: color .3s;
+            }
+
+        }
+    }
+
+    &__link::before {
+        @media (max-width: 620px) {
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translateY(-50%);
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #000;
+            vertical-align: middle;
+
+        }
+
+    }
+
+    &__link::after {
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        transform: translateY(-50%);
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #000;
+        vertical-align: middle;
+    }
+
+    &__link--last-child::after {
+        content: none;
+
+        @media (max-width: 620px) {
+            content: '';
+        }
+    }
+
+    &__button {
+        margin-left: 60px;
+        background-color: red;
+        font-weight: bold;
+
+        @media (max-width: 680px) {
+            margin-left: 0;
+
+        }
+    }
+
+    &__content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../images/hero-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: #FFF;
+    }
+
+    &__title {
+        font-size: 3em;
+        text-transform: capitalize;
+
+        @media (max-width: 620px) {
+            font-size: 2em;
+        }
+    }
+
+    &__text {
+        margin-bottom: 35px;
+        font-family: $ff-main-light, sans-serif;
+        font-size: 2em;
+        text-transform: capitalize;
+
+        @media (max-width: 620px) {
+            font-size: 1.2em;
+            max-width: 80%;
+            text-align: center;
+        }
+    }
+
+    &__content-button {
+        font-size: 1.8em;
+        text-transform: uppercsase;
+        background-color: #f8cd53;
+
+        @media (max-width: 620px) {
+            font-size: 1.2em;
+        }
+    }
+}
